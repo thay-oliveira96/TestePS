@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <h:dataTable value="#{tasksController.tasksList}" var="task">
+                <tr>
+                    <td>#{task.id}</td>
+                    <td>#{task.description}</td>
+                    <td>#{task.date}</td>
+                    <td>
+                        <h:form>
+                            <h:commandButton value="Editar" action="#{tasksController.editTask(task)}"/>
+                            <h:commandButton value="Deletar" action="#{tasksController.deleteTask(task)}"/>
+                        </h:form>
+                    </td>
+                </tr>
+            </h:dataTable>
+        </tbody>
+    </table>
+    <br/>
+    <h:form>
+        <h:commandButton value="Nova Tarefa" action="#{tasksController.goToCreateTask()}"/>
+    </h:form>
+</body>
+</html>

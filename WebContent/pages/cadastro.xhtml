@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Cadastro de Tarefas</title>
+</head>
+<body>
+    <h1>Cadastro de Tarefa</h1>
+    <h:form>
+        <p>
+            <label>Descrição: </label>
+            <h:inputText value="#{tasksController.task.description}" />
+        </p>
+        <p>
+            <label>Data: </label>
+            <h:inputText value="#{tasksController.task.date}" />
+        </p>
+        <p>
+            <h:commandButton value="Salvar" action="#{tasksController.createTask()}" />
+        </p>
+    </h:form>
+</body>
+</html>

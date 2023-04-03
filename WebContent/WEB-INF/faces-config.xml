@@ -1,0 +1,13 @@
+<faces-config>
+    <managed-bean>
+        <managed-bean-name>TasksController</managed-bean-name>
+        <managed-bean-class>br.com.elawtasks.controller.TasksController</managed-bean-class>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/listar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/listar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
